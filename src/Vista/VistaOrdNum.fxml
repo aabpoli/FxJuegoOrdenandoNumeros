@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" fx:id="Pentrada" prefHeight="419.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.VistaOrdNumController">
+   <children>
+      <Label layoutX="14.0" layoutY="21.0" prefHeight="53.0" prefWidth="275.0" text="Ordenando" textFill="#83a6d0">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="48.0" />
+         </font>
+      </Label>
+      <Label layoutX="259.0" layoutY="47.0" prefHeight="56.0" prefWidth="246.0" text="Números" textFill="#35989e">
+         <font>
+            <Font name="Arial Rounded MT Bold" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="ImgNiño" disable="true" fitHeight="134.0" fitWidth="129.0" layoutX="607.0" layoutY="16.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../Imagenes/NiñoON.png" />
+         </image>
+      </ImageView>
+      <TabPane fx:id="Pantallas" layoutX="13.0" layoutY="162.0" prefHeight="249.0" prefWidth="728.0" side="BOTTOM" tabClosingPolicy="UNAVAILABLE">
+        <tabs>
+          <Tab fx:id="Pantalla1" text="Inicio">
+            <content>
+              <AnchorPane fx:id="PanePantalla1" minHeight="0.0" minWidth="0.0" prefHeight="242.0" prefWidth="728.0">
+                     <children>
+                        <Label layoutX="48.0" layoutY="76.0" text="Número de participantes:" />
+                        <Label layoutX="48.0" layoutY="139.0" text="Cantidad de niveles:" />
+                        <TextField fx:id="TnumParticipantes" layoutX="191.0" layoutY="72.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="59.0" />
+                        <TextField fx:id="TnumNiveles" layoutX="191.0" layoutY="135.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="59.0" />
+                        <Button fx:id="Bcontinuar" layoutX="643.0" layoutY="194.0" mnemonicParsing="false" onAction="#Clic" prefHeight="25.0" prefWidth="85.0" text="Continuar..." />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+          <Tab fx:id="Pantalla2" disable="true" text="Participantes">
+            <content>
+              <AnchorPane fx:id="PanePantalla2" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Button fx:id="Bsiguiente" layoutX="643.0" layoutY="194.0" mnemonicParsing="false" onAction="#ClicPar" prefHeight="25.0" prefWidth="85.0" text="Siguiente..." />
+                        <TextField fx:id="Tp2NombreParticipante" layoutX="200.0" layoutY="121.0" prefHeight="25.0" prefWidth="420.0" />
+                        <Label layoutX="30.0" layoutY="54.0" text="Participante número: " />
+                        <TextField fx:id="Tp2Numparticipantes" editable="false" layoutX="144.0" layoutY="50.0" prefHeight="25.0" prefWidth="44.0" />
+                        <Label layoutX="143.0" layoutY="125.0" text="Nombre:" />
+                     </children>
+                  </AnchorPane>
+            </content>
+          </Tab>
+            <Tab fx:id="Pantalla3" disable="true" text="Juego">
+               <content>
+                  <AnchorPane fx:id="PanePantalla3">
+                     <children>
+                        <Button fx:id="BJentregar" layoutX="641.0" layoutY="38.0" mnemonicParsing="false" onAction="#ClicJ" prefHeight="25.0" prefWidth="61.0" text="Entregar" textFill="#0d8ad9" />
+                        <Line endX="575.0" layoutX="126.0" layoutY="65.0" startX="-100.0" stroke="#729cda" />
+                        <Label fx:id="LJnivel" layoutX="24.0" prefHeight="27.0" prefWidth="155.0" text="Nivel No. :">
+                           <font>
+                              <Font name="System Bold Italic" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LJnombrePart" layoutX="24.0" layoutY="44.0" prefHeight="20.0" prefWidth="340.0" text="Nombre Participante... ">
+                           <font>
+                              <Font size="14.0" />
+                           </font></Label>
+                        <Label fx:id="LJpuntaje" layoutX="388.0" layoutY="44.0" prefHeight="20.0" prefWidth="210.0" text="Puntaje Acumulado: ">
+                           <font>
+                              <Font size="13.0" />
+                           </font></Label>
+                        <Label layoutX="26.0" layoutY="86.0" text="Números a ordenar:" textFill="#792222" />
+                        <Label fx:id="LJaleatorios" layoutX="26.0" layoutY="104.0" prefHeight="17.0" prefWidth="675.0" text="99, 55, 34, 56, 76, 09, 10, 99, 55, 34, 56, 76, 09, 10, 99, 55, 34, 56, 76, 09, 10, 99" textFill="#792222">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Pane layoutX="28.0" layoutY="161.0" prefHeight="39.0" prefWidth="701.0">
+                           <children>
+                              <TextField fx:id="BJ1" layoutX="7.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ2" layoutX="38.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ3" layoutX="69.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ4" layoutX="100.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ5" layoutX="131.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ6" layoutX="162.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ7" layoutX="193.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ8" layoutX="224.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ9" layoutX="255.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ10" layoutX="286.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ11" layoutX="317.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ12" layoutX="348.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ13" layoutX="379.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ14" layoutX="410.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ15" layoutX="441.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ16" layoutX="472.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ17" layoutX="503.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ18" layoutX="534.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ19" layoutX="565.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ20" layoutX="596.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ21" layoutX="627.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                              <TextField fx:id="BJ22" layoutX="658.0" layoutY="7.0" onKeyTyped="#validacionSoloNumeros" prefHeight="25.0" prefWidth="30.0" />
+                           </children>
+                        </Pane>
+                        <Label layoutX="20.0" layoutY="144.0" text="Escriba los números en las casillas de manera ordenada, &lt;de menor a mayor&gt;" textFill="#424cbc" />
+                        <Label layoutX="4.0" layoutY="169.0" text="---&gt;" textFill="#606490">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font></Label>
+                        <Label layoutX="37.0" layoutY="194.0" text="    1        2          3         4          5         6         7          8         9        10         11       12       13      14        15        16       17        18       19        20        21       22" textFill="#b3b3b9">
+                           <font>
+                              <Font size="10.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LJtamaño" layoutX="441.0" layoutY="142.0" prefHeight="20.0" prefWidth="258.0" text="(10 numeros)" textFill="#c3b9b9" />
+                     </children></AnchorPane>
+               </content>
+            </Tab>
+            <Tab fx:id="Pantalla4" disable="true" text="Ranking">
+              <content>
+                <AnchorPane fx:id="PanePantalla4" minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                     <children>
+                        <Line endX="100.0" layoutX="366.0" layoutY="50.0" startX="-100.0" stroke="#0b27e0" translateX="4.0" AnchorPane.topAnchor="49.5" />
+                        <Line endX="100.0" layoutX="168.0" layoutY="93.0" startX="-100.0" stroke="#09e310" />
+                        <Line endX="100.0" layoutX="571.0" layoutY="135.0" startX="-100.0" stroke="#e12208" />
+                        <Line endX="100.0" endY="30.0" layoutX="269.0" layoutY="87.0" rotate="-107.1" scaleX="0.5" startX="-100.0" stroke="#0b27e0" />
+                        <Line endX="100.0" endY="30.0" layoutX="470.0" layoutY="106.0" rotate="78.1" scaleX="0.7" startX="-100.0" stroke="#0b27e0" />
+                        <Line endX="100.0" endY="30.0" layoutX="672.0" layoutY="145.0" rotate="52.4" scaleX="0.2" startX="-100.0" stroke="#e12208" />
+                        <Line endX="100.0" endY="30.0" layoutX="68.0" layoutY="120.0" rotate="69.0" scaleX="0.4" startX="-100.0" stroke="#09e310" />
+                        <Label fx:id="Lcampeon" alignment="CENTER" layoutX="269.0" layoutY="12.0" prefHeight="17.0" prefWidth="201.0" text="Campeón" textAlignment="CENTER" textFill="#182ca1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="278.0" layoutY="58.0" prefHeight="27.0" prefWidth="183.0" text="1er Puesto" textAlignment="CENTER" textFill="#182ca1">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LpuntosCampeon" alignment="CENTER" layoutX="276.0" layoutY="97.0" prefHeight="27.0" prefWidth="188.0" text="Puntos Campeon" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LpuntosSegundo" alignment="CENTER" layoutX="75.0" layoutY="129.0" prefHeight="27.0" prefWidth="188.0" text="Puntos Segundo" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="74.0" layoutY="97.0" prefHeight="27.0" prefWidth="187.0" text="2do Puesto" textAlignment="CENTER" textFill="#219436">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Lsegundo" alignment="CENTER" layoutX="68.0" layoutY="55.0" prefHeight="17.0" prefWidth="201.0" text="Segundo" textAlignment="CENTER" textFill="#219436">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="Ltercero" alignment="CENTER" layoutX="471.0" layoutY="99.0" prefHeight="17.0" prefWidth="201.0" text="Tercero" textAlignment="CENTER" textFill="#dd1409">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="CENTER" layoutX="479.0" layoutY="138.0" prefHeight="27.0" prefWidth="186.0" text="3er Puesto" textAlignment="CENTER" textFill="#dd1409">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="LpuntosTercero" alignment="CENTER" layoutX="480.0" layoutY="168.0" prefHeight="27.0" prefWidth="185.0" text="Puntos Tercero" textAlignment="CENTER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                     </children></AnchorPane>
+              </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

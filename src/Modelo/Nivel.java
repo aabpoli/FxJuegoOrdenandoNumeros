@@ -11,9 +11,9 @@ package Modelo;
  */
 public class Nivel {
 
-    private int numero = 0;
+    private int numero;
     private Serie serie;
-    private int puntaje = 0;
+    private int puntaje;
 
     /** 
      * Metodo Construtor de la clase Nivel

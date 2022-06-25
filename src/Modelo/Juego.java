@@ -31,18 +31,6 @@ public class Juego {
     }
 
     /**
-     * Metodo setParticipantes permite crear un nuevo objeto tipo participante y
-     * adicionarlo a la lista de participantes.
-     *
-     * @param nombre del paticipante
-     * @param codigo del paticipante
-     */
-    public void setParticipantes(String nombre, int codigo) {
-        Participante participante = new Participante(nombre);
-        participantes.put(codigo, participante);
-    }
-
-    /**
      * Metodo getNivel lee los datos del Nivel
      *
      * @return Nivel
@@ -58,6 +46,18 @@ public class Juego {
      */
     public Map<Integer, Participante> getParticipantes() {
         return participantes;
+    }
+
+    /**
+     * Metodo setParticipantes permite crear un nuevo objeto tipo participante y
+     * adicionarlo a la lista de participantes.
+     *
+     * @param nombre del paticipante
+     * @param codigo del paticipante
+     */
+    public void setParticipantes(String nombre, int codigo) {
+        Participante participante = new Participante(nombre);
+        participantes.put(codigo, participante);
     }
 
     /**
@@ -89,10 +89,10 @@ public class Juego {
     }
 
     /**
-     * Metodo RankinParticipantes al final del juego arma y retorna el Ranking 
+     * Metodo RankinParticipantes al final del juego arma y retorna el Ranking
      * con los tres mejores puntajes de todo el juego.
      */
-    public int[][] RankingParticipantes() {
+    public int[][] rankingParticipantes() {
         int[][] resultado = new int[3][2];
         int auxiliar;
         int cambio;
@@ -105,7 +105,7 @@ public class Juego {
 
             if (auxiliar > resultado[0][1]) {
                 cambio = resultado[0][1];
-                cambioPos = resultado[0][0]; 
+                cambioPos = resultado[0][0];
                 resultado[0][0] = posicion;
                 resultado[0][1] = auxiliar;
                 auxiliar = cambio;
@@ -113,7 +113,7 @@ public class Juego {
             }
             if (auxiliar > resultado[1][1]) {
                 cambio = resultado[1][1];
-                cambioPos = resultado[1][0]; 
+                cambioPos = resultado[1][0];
                 resultado[1][0] = posicion;
                 resultado[1][1] = auxiliar;
                 auxiliar = cambio;
@@ -121,7 +121,7 @@ public class Juego {
             }
             if (auxiliar > resultado[2][1]) {
                 cambio = resultado[2][1];
-                cambioPos = resultado[2][0]; 
+                cambioPos = resultado[2][0];
                 resultado[2][0] = posicion;
                 resultado[2][1] = auxiliar;
                 auxiliar = cambio;

@@ -12,10 +12,10 @@ import java.util.Arrays;
  */
 public class Serie {
 
-    int tamaño;
-    int[] numerosAletorios;
-    int[] numerosOrdenados;
-    int[] numerosUsuario;
+    private int tamaño;
+    private int[] numerosAletorios;
+    private int[] numerosOrdenados;
+    private int[] numerosUsuario;
 
     /** 
      * Metodo Construtor de la clase SerieNumerica, 

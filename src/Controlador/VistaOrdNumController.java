@@ -179,7 +179,7 @@ public class VistaOrdNumController implements Initializable {
         Tp2Numparticipantes.textProperty().set("1");
 
         if (numParticipantes == 1) {
-            Bsiguiente.setText("Inciar Juego");
+            Bsiguiente.setText("Iniciar Juego");
         }
 
         PartActual = 1;
@@ -263,7 +263,7 @@ public class VistaOrdNumController implements Initializable {
     }
 
     private void definicionRanking(){
-        int [][] resultado = juego.RankingParticipantes();
+        int [][] resultado = juego.rankingParticipantes();
         
         if (resultado[0][0] > 0) {
             Lcampeon.textProperty().set(nombreParticipante(resultado[0][0]));

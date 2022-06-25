@@ -11,8 +11,8 @@ import java.util.TreeMap;
  */
 public class Participante {
 
-    private String nombre = " ";
-    private int puntajeTotal = 0;
+    private String nombre;
+    private int puntajeTotal;
     private Map<Integer, Nivel> niveles = new TreeMap<>();
 
     /** 

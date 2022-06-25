@@ -215,7 +215,7 @@ public class VistaOrdNumController implements Initializable {
             Tp2Numparticipantes.textProperty().set("" + PartActual);
             Tp2NombreParticipante.textProperty().set("");
             if (PartActual == numParticipantes) {
-                Bsiguiente.setText("Inciar Juego");
+                Bsiguiente.setText("Iniciar Juego");
             }
         }
     }
@@ -373,5 +373,4 @@ public class VistaOrdNumController implements Initializable {
         BJ21.textProperty().set("");
         BJ22.textProperty().set("");
     }
-
 }

@@ -12,17 +12,17 @@
 
 <AnchorPane id="AnchorPane" fx:id="Pentrada" prefHeight="419.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controlador.VistaOrdNumController">
    <children>
-      <Label layoutX="14.0" layoutY="21.0" prefHeight="53.0" prefWidth="275.0" text="Ordenando" textFill="#83a6d0">
+      <Label layoutX="19.0" layoutY="26.0" prefHeight="53.0" prefWidth="275.0" text="Ordenando" textFill="#83a6d0">
          <font>
             <Font name="Arial Rounded MT Bold" size="48.0" />
          </font>
       </Label>
-      <Label layoutX="259.0" layoutY="47.0" prefHeight="56.0" prefWidth="246.0" text="Números" textFill="#35989e">
+      <Label layoutX="264.0" layoutY="52.0" prefHeight="56.0" prefWidth="246.0" text="Números" textFill="#35989e">
          <font>
             <Font name="Arial Rounded MT Bold" size="48.0" />
          </font>
       </Label>
-      <ImageView fx:id="ImgNiño" disable="true" fitHeight="134.0" fitWidth="129.0" layoutX="607.0" layoutY="16.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="ImgNiño" disable="true" fitHeight="134.0" fitWidth="129.0" layoutX="599.0" layoutY="17.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../Imagenes/NiñoON.png" />
          </image>
@@ -176,6 +176,11 @@
                               <Font name="System Bold" size="14.0" />
                            </font>
                         </Label>
+                        <ImageView fitHeight="85.0" fitWidth="89.0" layoutX="332.0" layoutY="127.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../Imagenes/campeon.png" />
+                           </image>
+                        </ImageView>
                      </children></AnchorPane>
               </content>
             </Tab>

@@ -167,25 +167,29 @@ public class VistaOrdNumController implements Initializable {
         }
 
         if (numNiveles > 10) {
+            JOptionPane.showMessageDialog(null, "El nivel maximo es 10");
             numNiveles = 10;
+            TnumParticipantes.textProperty().set("" + numParticipantes);
+            TnumNiveles.textProperty().set("" + numNiveles);
+        
+        } else {          
+            Pantalla1.disableProperty().setValue(Boolean.TRUE);
+            PanePantalla1.visibleProperty().setValue(Boolean.FALSE);
+            Pantalla2.disableProperty().setValue(Boolean.FALSE);
+            PanePantalla2.visibleProperty().setValue(Boolean.TRUE);
+            Pantalla1.getTabPane().getSelectionModel().select(Pantalla2);
+
+            Tp2Numparticipantes.textProperty().set("1");
+
+            if (numParticipantes == 1) {
+                Bsiguiente.setText("Iniciar Juego");
+            }
+
+            PartActual = 1;
+            NivelActual = 1;
+
+            juego = new Juego();
         }
-
-        Pantalla1.disableProperty().setValue(Boolean.TRUE);
-        PanePantalla1.visibleProperty().setValue(Boolean.FALSE);
-        Pantalla2.disableProperty().setValue(Boolean.FALSE);
-        PanePantalla2.visibleProperty().setValue(Boolean.TRUE);
-        Pantalla1.getTabPane().getSelectionModel().select(Pantalla2);
-
-        Tp2Numparticipantes.textProperty().set("1");
-
-        if (numParticipantes == 1) {
-            Bsiguiente.setText("Iniciar Juego");
-        }
-
-        PartActual = 1;
-        NivelActual = 1;
-
-        juego = new Juego();
     }
 
     @FXML
